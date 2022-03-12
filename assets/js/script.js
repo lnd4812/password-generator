@@ -20,11 +20,11 @@ document.getElementById("generate").addEventListener("click", function(){
 
       if (includeUpperCase) {
         // if yes, function to include at least one Upper Case letter, else function to exclude - in either case, validate input & select at least one number
-      
+      var letterInput = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";  
       } 
       else {
         // ensure any letters added to the password are lower case only
-      }
+      } var letterInput = "abcdefghijklmnopqrstuvwxyz";
  
        
   // (click) ask user if they'd like to include any numbers in the new password
@@ -32,13 +32,12 @@ document.getElementById("generate").addEventListener("click", function(){
     var includeNumber = window.confirm("Would you like your password to include numbers?");
   
     if (includeNumber) {
-      // if yes, function to include numbers, else function to exclude - in either case, validate input & select at least one number
-      //some function
+      // create var with numbers
+      var numComponents = "0123456789";
     } 
-
     else {
       // ensure no numbers are included in password
-    }
+    } var numComponnents = null;  //is this correct
  
   // (click) ask user if they'd like to include any special characters in the new password
   var includeSpecial = window.confirm ("Would you like your password to include special characters?");
@@ -46,13 +45,11 @@ document.getElementById("generate").addEventListener("click", function(){
     // if yes, include special characters, else do not - in either case, validate input and select at least one special character
     if(includeSpecial) {
       // ensure at least one special character is included within password
+      var SpecialChar = "!@#$%^&*";
     } 
     else {
       // ensure no special characters are included in password
-
-  
-  
-
+      var SpecialChar = null;
   } 
 
 
