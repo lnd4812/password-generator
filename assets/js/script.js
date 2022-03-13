@@ -1,9 +1,9 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
+
 var writePassword = function() {
   
-  document.querySelector("#password").value = "";   
   //ask user to answer a series of questions to provide the necessary components of the password; if user hits cancel, program does not proceed
   var proceed = window.confirm("Welcome to the Password Generator LND2022.  If you would like to create a new password, please click OK, otherwise please click on the CANCEL button");
   
@@ -70,7 +70,9 @@ var writePassword = function() {
     
     //check passwordCombo value in console
     console.log(passwordCombo);
-        
+    
+    window.alert("Thank you for your information.  Your new password will follow. Please refresh the browser when done to clear your password.");
+
     // Write password to the #password input
       //continue adding characters from array until number required are strung together to form password   
       function generatePassword() {   
@@ -83,12 +85,10 @@ var writePassword = function() {
       passwordText.value = password;
       }
       generatePassword(newPasswordLength);
-    } // end of generatePassword function 
+    } // end of password generating function 
   } // end of else statement in line 13 to start process
 }; 
 writePassword(); 
 
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-document.querySelector("#password").value = "";   
