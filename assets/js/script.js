@@ -2,12 +2,27 @@
 var generateBtn = document.querySelector("#generate");
 
 var writePassword = function() {
+  
+  
+  document.getElementById("#password").addEventListener("click", function(){
+  document.getElementById("password") = null});
+    
   // ask user to answer a series of questions to provide the necessary components of the password; if user hits cancel, program does not proceed
   var proceed = window.confirm("Welcome to the Password Generator LND2022.  If you would like to create a new password, please click OK, otherwise please click on the CANCEL button");
   
   // if user pressed OK, proceed through following steps
   if(proceed) {
-    // Letter components 
+      var newPasswordLength = window.prompt("Please select a number from 8 to 128 to set the length of your new password");
+      // confirm number input is within required range
+      if(console.log(newPasswordLength) < 8 || console.log(newPasswordLength) > 128) {
+      window.alert("You picked an incorrect option.  Please try again, entering a number between 8 and 128.");
+      //return to window prompt command)
+      writePassword();
+      } 
+      else {
+    
+      // have user enter preferences based on the following 3 components
+      // Letter components 
       // ask user if they'd like to include capital letters in the new password
       var includeUpperCase = window.confirm("Would you like your password to include Capital letters?");
         //If yes - include command to include, else all small letters - validate input and select at least one letter
@@ -19,7 +34,10 @@ var writePassword = function() {
           // ensure any letters added to the password are lower case only
           } var letterInput = "abcdefghijklmnopqrstuvwxyz"; 
       
-    //Numeric Components    
+          // check IncludeUpperCase value in console
+          console.log(letterInput);
+
+      //Numeric Components    
       // ask user if they'd like to include any numberic values in the new password
       var includeNum = window.confirm("Would you like your password to include numbers?");
         // If yes, create var with numbers 
@@ -31,7 +49,10 @@ var writePassword = function() {
           // ensure number string is empty
         } var numInput = "";
       
-    // Special Character Components 
+        // check IncludeNum value in console
+        console.log(numInput);
+      
+        // Special Character Components 
       // ask user if they'd like to include any special characters in the new password
       var specialCharacters = window.confirm("Would you like your password to include special characters?");
         // if yes, include special characters, otherwise no
@@ -44,20 +65,16 @@ var writePassword = function() {
         var specialCharInput = ""; // specialCharInput has no value
         }
     
-    //combine the user's selections into a single string
+        // check specialCharacters value in console
+        console.log(specialCharInput);
+        
+    //combine the user's selections into string with required components
     var passwordCombo = (letterInput + numInput + specialCharInput);
     
-    //check
+    //check passwordCombo value in console
     console.log(passwordCombo);
         
     // Write password to the #password input
-    var newPasswordLength = window.prompt("Please select a number from 8 to 128 to set the length of your new password");
-      // confirm number input is within required range
-      if(console.log(newPasswordLength) < 8 && console.log(newPasswordLength) > 128) {
-      window.alert("You picked an incorrect option.  Please try again, entering a number between 8 and 128.");
-      //return to window prompt command)
-      } 
-      else {
       //continue adding characters from array until number required are strung together to form password   
       function generatePassword() {   
       // ask user how many characters they want in their password
@@ -68,7 +85,9 @@ var writePassword = function() {
       var passwordText = document.querySelector("#password");
       passwordText.value = password;
       }
-      generatePassword(newPasswordLength);        
+      
+      generatePassword(newPasswordLength);  
+         
     } 
   }
 };

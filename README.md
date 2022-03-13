@@ -1,12 +1,16 @@
 # Password Generator Challenge
 
-The purpose of this project is to use Javascript functions along with concepts learned in Module 3 to generate a password using a modal created from and styled within the starter code.  An event handler has also been included in the starter code as a means of initiating the password generation function from a button embedded in the modal.
+The purpose of this project is to use Javascript functions along with concepts learned in Module 3 to generate a password using a modal created from and styled within the starter code.  
+
+![modal developed from starter code](https://lnd4812/github.io/../../../assets/js/password-generator-sample.png).
+
+An event handler has also been included in the starter code as a means of initiating the password generation function from a button embedded in the modal.
 
 The user is asked to choose the number of characters to be included in the password, ranging from 8 to 128 and is then asked a series of questions to determine whether the new password will include some combination of Upper and lower case letters, numbers and/or special characters.  A "for" loop in the function will iterate through a concatenation of the selected input variables until the desired length has been satisfied and output the result to a text field in the modal.
 
 ## Requirements
 
-No special requirements beyond meeting the acceptance criteria of the chanllenge.
+No special requirements beyond meeting the acceptance criteria of the challenge.
 
 ## Built With
 
@@ -28,14 +32,16 @@ questions to complete password criteria
 formula to compile the password
 outputting the password...
 
+
 ## License
 
 An MIT [License] has been included with this project.
 
 ## Credits and external Resources
 
-A full description of Challenge 3's criteria is outlined here: [Module 3 Challenge Project Page](https://courses.bootcampspot.com/courses/1181/assignments/23403?module_item_id=459947).
-Additional assistance was provided by the TA's during Office Hours.
+- A full description of Challenge 3's criteria is outlined here: [Module 3 Challenge Project Page](https://courses.bootcampspot.com/courses/1181/assignments/23403?module_item_id=459947).
+- Additional assistance was provided by the TA's during Office Hours.
+- various internet websites including [MDN Docs](https://developer.mozilla.org), [W3Schools](https://www.w3schools.com) and [Stack Overflow](https://stackoverflow.com).
 
 ## Task list
 
