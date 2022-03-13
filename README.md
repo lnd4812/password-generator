@@ -33,7 +33,7 @@ The main design uses the modal created from the Starter Code that enables the us
 
 The starter code includes coding to generate the "Generate Password" button and event handler. To then begin the process to generate a password:
 
-1. Using an If/Else statement, the user is first asked if they wish to continue or end the process using window.confirm that will terminate the function if the user clicks Cancel. (**note: tried to delay window.confirm until generate password button clicked, but not yet versed enough yet with event.listener to executed it properly.**)
+1. Using an If/Else statement, the user is first asked if they wish to continue or end the process using window.confirm that will terminate the function if the user clicks Cancel. (*note: tried to delay window.confirm until generate password button clicked, but not yet versed enough yet with event.listener to executed it properly.*)
 
 2. Using an If/Else statement, the user is asked to choose between 8 and 128 characters for the length of the password; if a number outide of this range is chosen, the user is advised to start again and is reminded of the number range options.
 

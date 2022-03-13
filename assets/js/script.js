@@ -1,10 +1,11 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-var writePassword = function() {
 
+var writePassword = function() {
+  
   //ask user to answer a series of questions to provide the necessary components of the password; if user hits cancel, program does not proceed
-  var proceed = window.confirm("Welcome to your Secure Password Generator.  If you would like to create a new password, please click OK, otherwise please click on the CANCEL button");
+  var proceed = window.confirm("Welcome to your Secure Password Generator.If you would like to create a new password, please click OK, otherwise please click on the CANCEL button");
   
   // if user clicks Cancel, exit process
   if(proceed === false) {
@@ -74,14 +75,14 @@ var writePassword = function() {
       function generatePassword() {   
       // ask user how many characters they want in their password
       var password = '';
-        for(var i = 0; i < newPasswordLength; i++ ) {
+      for(var i = 0; i < newPasswordLength; i++ ) {
           password += passwordCombo.charAt(Math.floor(Math.random() * passwordCombo.length));
         }
-      var passwordText = document.querySelector("#password");
-      passwordText.value = password;
+        var passwordText = document.querySelector("#password");
+        passwordText.value = password; 
       }
       generatePassword(newPasswordLength);
-    } // end of password generating function 
+    }// end of password generating function 
   } // end of else statement in line 13 to start process
 }; 
 writePassword(); 
