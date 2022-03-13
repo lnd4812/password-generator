@@ -1,5 +1,3 @@
-
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -53,17 +51,25 @@ var writePassword = function() {
     console.log(passwordCombo);
         
     // Write password to the #password input
-   var newPasswordLength = window.prompt("Please select a number from 8 to 128 to set the length of your new password");  //continue adding characters from array until number required are strung together to form password   
-   function generatePassword() {   
-   // ask user how many characters they want in their password
-   var password = '';
-      for(var i = 0; i < newPasswordLength; i++ ) {
-        password += passwordCombo.charAt(Math.floor(Math.random() * passwordCombo.length));
-      }
+    var newPasswordLength = window.prompt("Please select a number from 8 to 128 to set the length of your new password");
+      // confirm number input is within required range
+      if(console.log(newPasswordLength) < 8 && console.log(newPasswordLength) > 128) {
+      window.alert("You picked an incorrect option.  Please try again, entering a number between 8 and 128.");
+      //return to window prompt command)
+      } 
+      else {
+      //continue adding characters from array until number required are strung together to form password   
+      function generatePassword() {   
+      // ask user how many characters they want in their password
+      var password = '';
+        for(var i = 0; i < newPasswordLength; i++ ) {
+          password += passwordCombo.charAt(Math.floor(Math.random() * passwordCombo.length));
+        }
       var passwordText = document.querySelector("#password");
       passwordText.value = password;
-    }
-    generatePassword(newPasswordLength);      
+      }
+      generatePassword(newPasswordLength);        
+    } 
   }
 };
 writePassword();  
