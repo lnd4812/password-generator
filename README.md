@@ -27,6 +27,17 @@ The repository has been stored on [Github](https://github.com/lnd4812/password-g
 
 The main design uses the modal created from the Starter Code that enables the user to go go through a series of steps that will determine the length and content of the new password. This is accomplished using a series of window object commands such as window.prompt for the user to indicate the number of characters in the new password and a series of window.confirm commands to determine the component types of the password.
 
+The starter code includes coding to generate the "Generate Password" button and event handler. To then begin the process to generate a password:
+
+1. Using an If/Else statement, the user is first asked if they wish to continue or end the process using window.confirm that will terminate the function if the user clicks Cancel.
+
+2. Using an If/Else statement, the user is asked to choose between 8 and 128 characters for the length of the password; if a number outide of this range is chosen, the user is advised to start again and is reminded of the number range options;
+
+3. Once the user has entered an acceptable number, they are taken through a series of questions to determine composition of password using If/Else statements regarding Upper/lower case, numeric and or special characters.
+
+4. Responses for all three criteria are then concatenated into a single string and applied to the function that will subsequently generate the pasword    
+   
+
 flush out: click event to generate button to begin password function
 questions to complete password criteria
 formula to compile the password
