@@ -18,7 +18,7 @@ var writePassword = function() {
       var newPasswordLength = window.prompt("Please select a number from 8 to 128 to set the length of your new password");
       // confirm number input is within required range
       if(newPasswordLength < 8 || newPasswordLength > 128) {
-        window.alert("You have entered an invalid number.  Please restart, choosing a number between 8 and 128.");
+        window.alert("You have entered an invalid number.  Please refresh the browser and start again, choosing a number between 8 and 128.");
         return;
       }
       else { // User to now enter preferences based on the following 3 components
@@ -26,29 +26,29 @@ var writePassword = function() {
       // Letter components 
       // ask user if they'd like to include capital letters in the new password
       var includeUpperCase = window.confirm("Would you like your password to include Capital letters?");
-        //If yes - include command to include, else all small letters - validate input and select at least one letter
-        if(includeUpperCase) {
-          // if yes, function to include at least one Upper Case letter, else function to exclude
-          var letterInput = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; 
+        //If no - exclude, else include
+        if(includeUpperCase === false) {
+          // if no, ensure any letters added to the password are lower case on
+          var letterInput = "abcdefghijklmnopqrstuvwxyz"; 
           } 
           else {
-          // ensure any letters added to the password are lower case only
-          } var letterInput = "abcdefghijklmnopqrstuvwxyz"; 
+          // add Upper case letters to string
+          } var letterInput = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; 
       
           // check IncludeUpperCase value in console
-          console.log(letterInput);
+        console.log(letterInput);
 
       //Numeric Components    
       // ask user if they'd like to include any numberic values in the new password
       var includeNum = window.confirm("Would you like your password to include numbers?");
-        // If yes, create var with numbers 
-        if(includeNum) {
-        // if yes, function to include at least one Upper Case letter, else function to exclude - in either case, validate input & select at least one number
-        var numInput = "0123456789";
+         
+        if(includeNum === false) {
+        // if no, return empty string
+        var numInput = "";
         } 
         else {
-          // ensure number string is empty
-        } var numInput = "";
+          // string includes numbers from 0-9
+        } var numInput = "0123456789";
       
         // check IncludeNum value in console
         console.log(numInput);
@@ -86,9 +86,7 @@ var writePassword = function() {
       var passwordText = document.querySelector("#password");
       passwordText.value = password;
       }
-      
       generatePassword(newPasswordLength);  
-         
     } 
   }
 };
