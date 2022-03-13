@@ -1,18 +1,18 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-
 var writePassword = function() {
-  
+
   //ask user to answer a series of questions to provide the necessary components of the password; if user hits cancel, program does not proceed
-  var proceed = window.confirm("Welcome to the Password Generator LND2022.  If you would like to create a new password, please click OK, otherwise please click on the CANCEL button");
+  var proceed = window.confirm("Welcome to your Secure Password Generator.  If you would like to create a new password, please click OK, otherwise please click on the CANCEL button");
   
-  // if user pressed OK, proceed through following steps
+  // if user clicks Cancel, exit process
   if(proceed === false) {
     window.alert("Thank you. Goodbye");
     return;
-  }   else  {
-      //start process
+  }   
+  else  {
+      //start process by asking user how many characters the password is to be
       var newPasswordLength = window.prompt("Please select a number from 8 to 128 to set the length of your new password");
       // confirm number input is within required range
       if(newPasswordLength < 8 || newPasswordLength > 128) {
@@ -27,18 +27,16 @@ var writePassword = function() {
         if(includeUpperCase === false) {
           // if no, ensure any letters added to the password are lower case only
           var letterInput = "abcdefghijklmnopqrstuvwxyz"; 
-          } 
-          else {
+        } 
+        else {
           // add Upper case letters to string
           var letterInput = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; 
-      
-          // check IncludeUpperCase value in console
+        // check IncludeUpperCase value in console
         console.log(letterInput);
-      } 
+        } 
       //Numeric Components    
       // ask user if they'd like to include any numberic values in the new password
       var includeNum = window.confirm("Would you like your password to include numbers?");
-         
         if(includeNum === false) {
         // if no, return empty string
         var numInput = "";
@@ -46,34 +44,32 @@ var writePassword = function() {
         else {
           // string includes numbers from 0-9
          var numInput = "0123456789";
-      
         // check IncludeNum value in console
         console.log(numInput);
-      }
-        // Special Character Components 
+        }
+      // Special Character Components 
       // ask user if they'd like to include any special characters in the new password
       var includeSpecial = window.confirm("Would you like your password to include special characters?");
-         
-      if(includeSpecial === false) {
-      // if no, return empty string
-      var specialCharInput = "";
-      } 
-      else {
+        if(includeSpecial === false) {
+        // if no, return empty string
+        var specialCharInput = "";
+        } 
+        else {
         // string includes special characters
-       var specialCharInput = "!#$%()*+,-./:;<=>?@[]^_`{|}~";
+        var specialCharInput = "!#$%()*+,-./:;<=>?@[]^_`{|}~";
+        // check IncludeNum value in console
+        console.log(specialCharInput);
+        } 
     
-      // check IncludeNum value in console
-      console.log(specialCharInput);
-      } 
-    //combine the user's selections into string with required components
-    var passwordCombo = (letterInput + numInput + specialCharInput);
-    
-    //check passwordCombo value in console
-    console.log(passwordCombo);
-    
-    window.alert("Thank you for your information.  Your new password will follow. Please refresh the browser when done to clear your password.");
+      //combine the user's selections into string with required components
+      var passwordCombo = (letterInput + numInput + specialCharInput);
+      //check passwordCombo value in console
+      console.log(passwordCombo);
+        
+      // advise user to refresh browser when done to clear password from display
+      window.alert("Thank you for your information.  Your new password will follow. Please refresh the browser when done to clear your password.");
 
-    // Write password to the #password input
+      // Write password to the #password input
       //continue adding characters from array until number required are strung together to form password   
       function generatePassword() {   
       // ask user how many characters they want in their password
