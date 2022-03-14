@@ -2,7 +2,7 @@
 
 The purpose of this project is to use Javascript functions along with concepts learned in Module 3 to generate a password using a modal created from and styled within the starter code.  
 
-![modal developed from starter code](https://lnd4812/github.io/../../../assets/images/password-generator-sample.png).
+![modal developed from starter code](https://raw.githubusercontent.com/lnd4812/password-generator/main/assets/images/password-generator-sample.png).
 
 An event handler has also been included in the starter code as a means of initiating the password generation function from a button embedded in the modal.
 
