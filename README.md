@@ -39,7 +39,7 @@ The starter code includes coding to generate the "Generate Password" button and 
 
 3. Once the user has entered an acceptable number, they are taken through a series of questions to determine composition of password using If/Else statements regarding Upper/lower case, numeric and/or (OWASP Foundation) special characters. For some reason, my coding seems to be working in reverse to how I had intended based on output on console.log in image following, but was advised it still appeared to be working as intended during on a consultation with "AskBCS" on Slack.
 
-    ![console.log display from selection criteria](https://github.com/lnd4812/io/../../../../assets/images/console.log-output-for-password-component-options.jpg)
+    ![console.log display from selection criteria](https://github.com/lnd4812/blob/../../../../assets/images/console.log-output-for-password-component-options.jpg)
 
 4. Responses for all three criteria are then concatenated into a single string and applied to the function that will subsequently generate the password using the Math.random function applied to the length of the string of characters randomly concatenated through through the length of the newPassword variable and output into the text field.
 
