@@ -1,6 +1,10 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
 var writePassword = function() {
   
   //ask user to answer a series of questions to provide the necessary components of the password; if user hits cancel, program does not proceed
@@ -13,7 +17,7 @@ var writePassword = function() {
   }   
   else  {
       //start process by asking user how many characters the password is to be
-      var newPasswordLength = window.prompt("Please select a number from 8 to 128 to set the length of your new password");
+      var newPasswordLength = parseInt(window.prompt("Please select a number from 8 to 128 to set the length of your new password"));
       // confirm number input is within required range
       if(newPasswordLength < 8 || newPasswordLength > 128) {
         window.alert("You have entered an invalid number.  Please refresh the browser and start again, choosing a number between 8 and 128.");
