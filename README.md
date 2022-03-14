@@ -10,7 +10,7 @@ The user is asked to choose the number of characters to be included in the passw
 
 If the function is executed successfully, a password of the required length and character components will display in the text field of the modal as in the following:  
 
-![random generated password displayed](https://lnd4812/github.io/../../../assets/images/password-output-display.png)
+![random generated password displayed](https://raw.githubusercontent.com/lnd4812/password-generator/main/assets/images/password-output-display.png)
 
 ## Requirements
 
