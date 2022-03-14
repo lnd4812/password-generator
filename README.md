@@ -57,7 +57,7 @@ An MIT [License] has been included with this project.
 
 ## Task list
 
-[ ]
+[ ] Corrections for issues where acceptance criteria not met (window.confirm pop-up before button click) 
 
 ## Contribution
 

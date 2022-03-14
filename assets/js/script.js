@@ -1,7 +1,6 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-
 var writePassword = function() {
   
   //ask user to answer a series of questions to provide the necessary components of the password; if user hits cancel, program does not proceed
