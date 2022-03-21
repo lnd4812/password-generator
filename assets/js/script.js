@@ -1,15 +1,15 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
 var writePassword = function() {
   
+//add event listener to then bring up the proceed message...
+
+
   //ask user to answer a series of questions to provide the necessary components of the password; if user hits cancel, program does not proceed
-  var proceed = window.confirm("Welcome to your Secure Password Generator.If you would like to create a new password, please click OK, otherwise please click on the CANCEL button");
+  var proceed = window.confirm("If you would like to create a new password, please click OK, otherwise please click on the CANCEL button");
   
+   
   // if user clicks Cancel, exit process
   if(proceed === false) {
     window.alert("Thank you. Goodbye");
@@ -88,7 +88,6 @@ var writePassword = function() {
     }// end of password generating function 
   } // end of else statement in line 13 to start process
 }; 
-writePassword(); 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
