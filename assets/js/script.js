@@ -26,7 +26,7 @@ var writePassword = function() {
       else { // User to now enter preferences based on the following 3 components
       // Letter components 
       // ask user if they'd like to include capital letters in the new password
-      var includeUpperCase = window.confirm("Would you like your password to include Capital letters?");
+      var includeUpperCase = window.confirm("Would you like your password to include Capital letters, small letters or both?");
         //If no - exclude, else include
         if(includeUpperCase === false) {
           // if no, ensure any letters added to the password are lower case only
@@ -65,6 +65,59 @@ var writePassword = function() {
         console.log(specialCharInput);
         } 
     
+        // CHANBE ABOVE TO SWITCH FUNCTION
+
+        //var shop = function() {
+          // ask player what they'd like to do
+         // var shopOptionPrompt = window.prompt("Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store?  Please enter one: 'REFILL', 'UPGRADE', or 'LEAVE; to make a choice.");
+         
+         // use switch to carry out action
+        // switch (shopOptionPrompt) {
+         //  case "REFILL": // new case
+          // case "refill":
+           //  if (playerInfo.money >= 7) {
+            //   window.alert("Refilling player's health by 20 for 7 dollars.");
+             
+               // increase health and decrease money
+             //  playerInfo.health = playerInfo.health + 20;
+             //  playerInfo.money = playerInfo.money - 7;
+             }
+           //  else {
+           //    window.alert("You don't have enough money!");
+           //  }
+         
+     //        break;
+     //      case "UPGRADE": // new case  
+      //     case "upgrade":
+      //       if (playerInfo.money >= 7) {
+       //        window.alert("Upgrading player's attack by 6 for 7 dollars.");
+             
+              // increase attack and decrease money
+      //         playerInfo.attack = playerInfo.attack + 6;
+       //        playerInfo.money = playerInfo.money - 7;
+             }
+        //     else {
+         //      window.alert("You don't have enough money!");
+         //    }
+         
+      //       break;
+      //     case "LEAVE":  // new case  
+      //     case "leave":
+      //       window.alert("Leaving the store.");  
+         
+             // do nothing; function ends
+      //       break;
+      //     default:
+       //      window.alert("You did not pick a valid option. Try again.");
+         
+             // call shop() again to force player to pick a valid option
+      //       shop();
+      //       break;
+        //   }
+       //  }; 
+
+
+
       //combine the user's selections into string with required components
       var passwordCombo = (letterInput + numInput + specialCharInput);
       //check passwordCombo value in console
