@@ -2,7 +2,7 @@
 
 The purpose of this project is to use Javascript functions along with concepts learned in Module 3 to generate a password using a modal created from and styled within the starter code.  
 
-![modal developed from starter code](https://lnd4812/github.io/../../../assets/images/password-generator-sample.png).
+![modal developed from starter code](https://raw.githubusercontent.com/lnd4812/password-generator/main/assets/images/password-generator-sample.png).
 
 An event handler has also been included in the starter code as a means of initiating the password generation function from a button embedded in the modal.
 
@@ -10,7 +10,7 @@ The user is asked to choose the number of characters to be included in the passw
 
 If the function is executed successfully, a password of the required length and character components will display in the text field of the modal as in the following:  
 
-![random generated password displayed](https://lnd4812/github.io/../../../assets/images/)
+![random generated password displayed](https://raw.githubusercontent.com/lnd4812/password-generator/main/assets/images/password-output-display.png)
 
 ## Requirements
 
@@ -39,7 +39,11 @@ The starter code includes coding to generate the "Generate Password" button and 
 
 3. Once the user has entered an acceptable number, they are taken through a series of questions to determine composition of password using If/Else statements regarding Upper/lower case, numeric and/or (OWASP Foundation) special characters. For some reason, my coding seems to be working in reverse to how I had intended based on output on console.log in image following, but was advised it still appeared to be working as intended during on a consultation with "AskBCS" on Slack.
 
+<<<<<<< HEAD
     ![console.log display from selection criteria](https://github.com/lnd4812/blob/../../../../assets/images/console.log-output-for-password-component-options.jpg)
+=======
+    ![console.log display from selection criteria](https://raw.githubusercontent.com/lnd4812/password-generator/main/assets/images/console.log-output-for-password-component-options.jpg)
+>>>>>>> ad10ca514c13b6d7a9768b5e1c65d78d8f4ef832
 
 4. Responses for all three criteria are then concatenated into a single string and applied to the function that will subsequently generate the password using the Math.random function applied to the length of the string of characters randomly concatenated through through the length of the newPassword variable and output into the text field.
 
