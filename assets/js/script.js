@@ -26,94 +26,125 @@ var writePassword = function() {
       else { // User to now enter preferences based on the following 3 components
       // Letter components 
       // ask user if they'd like to include capital letters in the new password
-      var includeUpperCase = window.confirm("Would you like your password to include Capital letters, small letters or both?");
+     // var includeUpperCase = window.confirm("Would you like your password to include Capital letters, small letters or both?");
         //If no - exclude, else include
-        if(includeUpperCase === false) {
+      //  if(includeUpperCase === false) {
           // if no, ensure any letters added to the password are lower case only
-          var letterInput = "abcdefghijklmnopqrstuvwxyz"; 
-        } 
-        else {
+     //     var letterInput = "abcdefghijklmnopqrstuvwxyz"; 
+     //   } 
+      //  else {
           // add Upper case letters to string
-          var letterInput = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; 
+      //    var letterInput = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; 
         // check IncludeUpperCase value in console
-        console.log(letterInput);
-        } 
+       // console.log(letterInput);
+     //   } 
       //Numeric Components    
       // ask user if they'd like to include any numberic values in the new password
-      var includeNum = window.confirm("Would you like your password to include numbers?");
-        if(includeNum === false) {
+   //   var includeNum = window.confirm("Would you like your password to include numbers?");
+  //      if(includeNum === false) {
         // if no, return empty string
-        var numInput = "";
-        } 
-        else {
+  //      var numInput = "";
+  //      } 
+   //     else {
           // string includes numbers from 0-9
-         var numInput = "0123456789";
+      //   var numInput = "0123456789";
         // check IncludeNum value in console
-        console.log(numInput);
-        }
+       // console.log(numInput);
+      //  }
       // Special Character Components 
       // ask user if they'd like to include any special characters in the new password
-      var includeSpecial = window.confirm("Would you like your password to include special characters?");
-        if(includeSpecial === false) {
+     // var includeSpecial = window.confirm("Would you like your password to include special characters?");
+     //   if(includeSpecial === false) {
         // if no, return empty string
-        var specialCharInput = "";
-        } 
-        else {
+    //    var specialCharInput = "";
+    //    } 
+    //    else {
         // string includes special characters
-        var specialCharInput = "!#$%()*+,-./:;<=>?@[]^_`{|}~";
+     //   var specialCharInput = "!#$%()*+,-./:;<=>?@[]^_`{|}~";
         // check IncludeNum value in console
-        console.log(specialCharInput);
-        } 
+       
+       // } 
     
-        // CHANBE ABOVE TO SWITCH FUNCTION
+        // Use switch function to incorporate password options
 
-        //var shop = function() {
-          // ask player what they'd like to do
-         // var shopOptionPrompt = window.prompt("Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store?  Please enter one: 'REFILL', 'UPGRADE', or 'LEAVE; to make a choice.");
+        var passWordComponents = function() {
+        // ask user to confirm choices for password components
          
-         // use switch to carry out action
-        // switch (shopOptionPrompt) {
-         //  case "REFILL": // new case
-          // case "refill":
-           //  if (playerInfo.money >= 7) {
-            //   window.alert("Refilling player's health by 20 for 7 dollars.");
+        var includeUpperCase = window.prompt("Would you like to your password to be all UPPERCASE LOWERCASE, a COMBINATION of both or no letters?");
+        // use switch to carry out action
+        switch (includeUpperCase) {
+        case "uppercase": // new case
+        case "UPPERCASE":
+            
+               // password will include only uppercase
+      letterInput = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+              
+      break;
+     //      
+     case "lowercase": // new case  
+     case "LOWERCASE":
+      //      
+     //password will include only lowercase
+      letterInput ="abcdefghijklmnopqrstuvwxyz";
+                   //             
+      break;
+
+   
+      case "combination":  // new case  
+      case "combination":
+      //     
+    //  password will include both upper- and lowercase
+      letterInput = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+      break;
+      
+default:
+letterInput = "";
+ 
+break;   
+}  
+console.log(letterInput);
+var includeNum = window.prompt("Would you like to your password to INCLUDE numbers or not?");
+         
+// use switch to carry out action
+switch (includeNum) {
+case "INCLUDE": // new case
+case "include":
+   // 
+       // password will include special characters
+ //   // password will include special characters
+numInput= "0123456789";
+              
+break;
+     //      
+      
+default: 
+  numInput = "";
+//} 
+break;   
+}  
+console.log(numInput);
+
+var includeSpecial = window.prompt("Would you like SPECIAL characters in your password or not?");
+         
+        // use switch to carry out action
+switch (includeSpecChar) {
+case "SPECIAL": // new case
+case "special":
+           // 
              
-               // increase health and decrease money
-             //  playerInfo.health = playerInfo.health + 20;
-             //  playerInfo.money = playerInfo.money - 7;
-             }
-           //  else {
-           //    window.alert("You don't have enough money!");
-           //  }
+specCharInput= "!#$%()*+,-./:;<=>?@[]^_`{|}~";
+      
+break;
+//      
+
+default:
+specCharInput = "";
+ 
+break;   }  
+
+
+console.log(specialCharInput);
          
-     //        break;
-     //      case "UPGRADE": // new case  
-      //     case "upgrade":
-      //       if (playerInfo.money >= 7) {
-       //        window.alert("Upgrading player's attack by 6 for 7 dollars.");
-             
-              // increase attack and decrease money
-      //         playerInfo.attack = playerInfo.attack + 6;
-       //        playerInfo.money = playerInfo.money - 7;
-             }
-        //     else {
-         //      window.alert("You don't have enough money!");
-         //    }
-         
-      //       break;
-      //     case "LEAVE":  // new case  
-      //     case "leave":
-      //       window.alert("Leaving the store.");  
-         
-             // do nothing; function ends
-      //       break;
-      //     default:
-       //      window.alert("You did not pick a valid option. Try again.");
-         
-             // call shop() again to force player to pick a valid option
-      //       shop();
-      //       break;
-        //   }
        //  }; 
 
 
@@ -121,7 +152,7 @@ var writePassword = function() {
       //combine the user's selections into string with required components
       var passwordCombo = (letterInput + numInput + specialCharInput);
       //check passwordCombo value in console
-      console.log(passwordCombo);
+            console.log(passwordCombo);
         
       // advise user to refresh browser when done to clear password from display
       window.alert("Thank you for your information.  Your new password will follow. Please refresh the browser when done to clear your password.");
