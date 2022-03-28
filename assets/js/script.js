@@ -3,7 +3,6 @@ var generateBtn = document.querySelector("#generate");
 
 var writePassword = function() {
   
-
 //ask user to answer a series of questions to provide the necessary components of the password; if user hits cancel, program does not proceed
 var proceed = window.confirm("If you would like to create a new password, please click OK, otherwise please click on the CANCEL button");
   
@@ -25,7 +24,7 @@ var proceed = window.confirm("If you would like to create a new password, please
         window.alert("Please choose at least one of the following options to create your password");
  
         // Letter options
-        var includeUpperCase = window.prompt("Would you like to your password to be all UPPERCASE LOWERCASE, a COMBINATION of both or NONE?");
+        var includeUpperCase = window.prompt("Would you like to your password to include UPPERCASE, LOWERCASE or BOTH?  For no letter components, please click 'cancel'.");
         
         // use switch to carry out action
         switch (includeUpperCase) {
@@ -42,20 +41,18 @@ var proceed = window.confirm("If you would like to create a new password, please
           letterInput ="abcdefghijklmnopqrstuvwxyz";
           break;
           //
-          case "combination":  
-          case "COMBINATION":
+          case "both":  
+          case "BOTH":
           // password will include both upper- and lowercase
           letterInput = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
           break;
           //
-          case "none":  
-          case "NONE":
+          default:
           // user does not want any letters in password  
           letterInput = "";
           break;   
         }  
-        console.log(letterInput);
-        
+                
         // Number options
         var includeNumber = window.prompt("Would you like to your password to INCLUDE numbers?");
          
@@ -72,8 +69,7 @@ var proceed = window.confirm("If you would like to create a new password, please
           numInput = "";
           break;   
         }  
-        console.log(numInput);
-
+        
         // Special Character options
         var includeSpecial = window.prompt("Would you like SPECIAL characters in your password?");
          
@@ -90,26 +86,18 @@ var proceed = window.confirm("If you would like to create a new password, please
           specCharInput = "";
           break; 
         }  
-        console.log(specCharInput);
-     
-
     //combine the user's selections into string with required components
     var passwordCombo = (letterInput + numInput + specCharInput);
-    //check passwordCombo value in console
-    console.log(passwordCombo);
-    
-    // if user mistakenly chose no options
-   // if (passwordCombo = "") {
-   // window.alert("You have not entered a valid option. Please return to the beginning and start again.")
-    //return;
-    //}  
-    
-   // else {
-      // advise user to refresh browser when done to clear password from display
+         
+    // if user somehow chose no options
+    if (passwordCombo.length === 0 ) {
+    window.alert("You have not entered a valid option. Please return to the beginning and start again.")
+    return;
+    }  
+    else {
       window.alert("Thank you for your information.  Your new password will follow. Please refresh the browser when done to clear your password.");
 
-      // Write password to the #password input
-      //continue adding characters from array until number required are strung together to form password   
+      // Write password to the #password input - continue adding characters from passwordCombo until number required are strung together to form password   
       function generatePassword() {   
       var password = '';
       for(var i = 0; i < newPasswordLength; i++ ) {
@@ -119,12 +107,11 @@ var proceed = window.confirm("If you would like to create a new password, please
         passwordText.value = password; 
       }
       generatePassword(newPasswordLength);
-    }// end of password generating function 
-        
 
-    }// end of if/else starting at line 101 
-//  }// end of else statement in line 13 to start process
-}; 
+      } // end of password generating function 
+    } // end of if/else statement validating at least one component option chosen
+  } // end of else statement validating value entered for # of characters
+};
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
