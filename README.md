@@ -1,6 +1,6 @@
-[';# Password Generator Challenge
+# Password Generator Challenge
 
-The purpose of this project is to use Javascript functions along with concepts learned in Module 3 to generate a password using a modal created from and styled within the starter code.  
+The purpose of this project is to use Javascript functions along with concepts learned in Module 3 to generate a password using a dropdown prompt from the starter code.  
 
 ![modal developed from starter code](https://raw.githubusercontent.com/lnd4812/password-generator/main/assets/images/password-generator-sample.png).
 
@@ -27,7 +27,7 @@ Javascript
 This site has been published via [Github Pages](https://lnd4812.github.io/password-generator/).
 The repository has been stored on [Github](https://github.com/lnd4812/password-generator.git).
 
-## Design
+## Design and functionality
 
 The main design uses the modal created from the Starter Code that enables the user to go go through a series of steps that will determine the length and content of the new password. This is accomplished using a series of window object commands such as window.prompt for the user to indicate the number of characters in the new password and a series of window.confirm commands to determine the component types of the password.
 
